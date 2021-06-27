@@ -1,0 +1,20 @@
+# arial, normal, size 1, width 1024
+# bold, size 3
+Installing ursina
+# normal, size 1
+
+
+# insert _getting_started.txt
+
+3) If everything went well, you can go to the introduction tutorial where
+   we'll cover how to create a basic program and how to run it.
+
+   [Introduction Tutorial, introduction_tutorial.html]
+
+
+## Troubleshooting
+
+<b>ursina installed sucessfully, but python can't find it when I try to run a script</b>
+
+If you're using a venv, make sure you're installing it to the venv and not to the default location.
+Alternatively you can just not use a venv.

@@ -1,0 +1,79 @@
+
+<!--generated with sswg-->
+<style>
+    html {max-width: 100%; margin: auto; color: #333333;}
+    a.button {padding: 15px 32px; background-color: #555; border-radius: 2em; border-width: 0px; text-decoration: none; color: white; font-size: 25.0px; line-height: 2.5em;}
+    a.button:hover {background-color: #777}
+    a.button_big {padding: 0.5em; background-image: linear-gradient(to top, #427b0e, #9ba97d); background-color: lightgray; background-blend-mode: multiply; border-radius: .75em; border-width: 0px; text-decoration: none; min-width: 150px; max-width: 150px; min-height: 150px; max-height: 150px; display: inline-block; vertical-align: top; margin: 4px 4px 10px 4px; color: white; font-size: 25.0px; background-size: auto 100%; background-position-x: center;}
+    a.button_big:hover {background-color: white; color: #e6d23f; text-decoration: underline;}
+    mark {background: #ccff99;}
+    span {background-color: rgba(0, 0, 0, 0.55); padding: .1em; line-height: 1.35em;}
+    img {max-width: 100%; vertical-align: top;}
+    .code_block {background-color: whitesmoke; padding: 10px; margin: 0; font-family: monospace; font-size: 20; font-weight: normal; white-space: pre;}
+
+</style>
+<html>
+<left>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>introduction_tutorial</title>
+<br>
+
+<a href=" documentation.html" class="button">← Back</a><br>
+<div style="font-family: arial;font-size: 20.0px;max-width: 1024px; margin: auto;">
+<div style="font-weight: bold;font-size: 60.0px;">
+Introduction Tutorial<br>
+<div style="font-weight: normal;font-size: 20.0px;">
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Creating and running a game"/><br>
+Creating and running a game<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+1) Open your preferred text editor. If you're new to programming, here are some suggestions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Atom<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Visual Studio Code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Sublime Text<br>
+<br>
+<br>
+2) Create a new file called main.py. This will contain out little game.<br>
+&nbsp;&nbsp; Because it ends with '.py' you should get some syntax highlighting<br>
+<br>
+<br>
+3) At the top of the file, write:<br>
+<div class="code_block" style="margin-left: 1em;"><font color="purple">from</font> ursina <font color="purple">import</font> *<br></div>&nbsp;&nbsp;&nbsp;&nbsp;This will import all the necessary things we need from the engine in one line.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;It means something like 'from ursina import all'. It's also possible to import parts of the engine<br>
+&nbsp;&nbsp;&nbsp;&nbsp;like this:<br>
+<div class="code_block" style="margin-left: 1em;"><font color="purple">from</font> ursina.prefabs <font color="purple">import</font> Button<br></div>&nbsp;&nbsp;&nbsp;&nbsp;Or import something that's not included by default:<br>
+<div class="code_block" style="margin-left: 1em;"><font color="purple">from</font> ursina.prefabs.first_person_controller <font color="purple">import</font> FirstPersonController<br></div><br>
+<br>
+4) Here's a really basic example game with comments to explain what were doing.<br>
+&nbsp;&nbsp; We will simply make a orange box move right and left when we press 'd' or 'a'.<br>
+<br>
+<div class="code_block" style="margin-left: 1em;"><font color="purple">from</font> ursina <font color="purple">import</font> *<br><br><font color="gray"># create a window</font>
+app = Ursina()<br><br><font color="gray"># most things in ursina are Entities. An Entity is a thing you place in the world.</font>
+<font color="gray"># you can think of them as GameObjects in Unity or Actors in Unreal.</font>
+<font color="gray"># the first paramenter tells us the Entity's model will be a 3d-model called 'cube'.</font>
+<font color="gray"># ursina includes some basic models like 'cube', 'sphere' and 'quad'.</font>
+<br><font color="gray"># the next parameter tells us the model's color should be orange.</font>
+<br><font color="gray"># 'scale_y=2' tells us how big the entity should be in the vertical axis, how tall it should be.</font>
+<font color="gray"># in ursina, positive x is right, positive y is up, and positive z is forward.</font>
+<br>player = <font color="olive">Entity</font>(model=<font color="green">'cube'</font>, color=color.orange, scale_y=2)<br><br><font color="gray"># create a function called 'update'.</font>
+<font color="gray"># this will automatically get called by the engine every frame.</font>
+<br><font color="purple">def</font> update():<br>    player.x += held_keys[<font color="green">'d'</font>] * time.dt<br>    player.x -= held_keys[<font color="green">'a'</font>] * time.dt<br><br><font color="gray"># this part will make the player move left or right based on our input.</font>
+<font color="gray"># to check which keys are held down, we can check the held_keys dictionary.</font>
+<font color="gray"># 0 means not pressed and 1 means pressed.</font>
+<font color="gray"># time.dt is simply the time since the last frame. by multiplying with this, the</font>
+<font color="gray"># player will move at the same speed regardless of how fast the game runs.</font>
+<br><br><font color="purple">def</font> input(key):<br>    if key == <font color="green">'space'</font>:<br>        player.y += 1<br>        invoke(setattr, player, <font color="green">'y'</font>, player.y-1, delay=.25)<br><br><br><font color="gray"># start running the game</font>
+app.run()<br><br><br></div><br>
+<br>
+5) Now we have to tell Python to run the script. To do this, open the command line and<br>
+&nbsp;&nbsp; go to the current folder. An easy way to do this is to type 'cmd' in the address bar.<br>
+&nbsp;&nbsp; Run the command below.<br>
+<br>
+<div class="code_block" style="margin-left: 1em;">python main.py<br></div><br>
+&nbsp;&nbsp; An alternative is to install the 'atom-python-run' package in Atom so you can start<br>
+&nbsp;&nbsp; the game by pressing F5.<br>
+<br>
+
+</html>

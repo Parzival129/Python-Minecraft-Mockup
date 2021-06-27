@@ -1,0 +1,213 @@
+
+<!--generated with sswg-->
+<style>
+    html {max-width: 100%; margin: auto; color: #333333;}
+    a.button {padding: 15px 32px; background-color: #555; border-radius: 2em; border-width: 0px; text-decoration: none; color: white; font-size: 25.0px; line-height: 2.5em;}
+    a.button:hover {background-color: #777}
+    a.button_big {padding: 0.5em; background-image: linear-gradient(to top, #427b0e, #9ba97d); background-color: lightgray; background-blend-mode: multiply; border-radius: .75em; border-width: 0px; text-decoration: none; min-width: 150px; max-width: 150px; min-height: 150px; max-height: 150px; display: inline-block; vertical-align: top; margin: 4px 4px 10px 4px; color: white; font-size: 25.0px; background-size: auto 100%; background-position-x: center;}
+    a.button_big:hover {background-color: white; color: #e6d23f; text-decoration: underline;}
+    mark {background: #ccff99;}
+    span {background-color: rgba(0, 0, 0, 0.55); padding: .1em; line-height: 1.35em;}
+    img {max-width: 100%; vertical-align: top;}
+    .code_block {background-color: whitesmoke; padding: 10px; margin: 0; font-family: monospace; font-size: 20; font-weight: normal; white-space: pre;}
+a.button {background-color: #6b943a;} a.button:hover {background-color: #a9a33a}
+</style>
+<html>
+<left>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> ursina engine</title>
+<br>
+
+<div style="text-align: center;font-weight: bold;font-family: arial;font-size: 100.0px;max-width: 900px; margin: auto;">
+ursina engine<br>
+ʕ •ᴥ•ʔゝ□<br>
+<div style="font-size: 25.0px;">
+--------------------------------------<br>
+<div style="font-weight: normal;">
+open source game engine<br>
+<div style="font-weight: bold;">
+--------------------------------------<br>
+<div style="font-weight: normal;">
+<br>
+<a href=" #Getting Started" class="button">Download</a>&nbsp;&nbsp;<a href=" documentation.html" class="button">Documentation</a><br>
+<br>
+<a href="https://github.com/pokepetter/ursina"><img src="icons/github_icon.png"></img></a>&nbsp;&nbsp;<a href="https://twitter.com/ursinaengine"><img src="icons/twitter_icon.png"></img></a>&nbsp;&nbsp;<a href="https://discord.gg/ydXfhyb"><img src="icons/discord_icon.png"></img></a>&nbsp;&nbsp;<a href="https://www.patreon.com/ursinaengine"><img src="icons/patreon_icon.png"></img></a><br>
+<br>
+<iframe width="900" height="505" src="https://www.youtube-nocookie.com/embed/j71j88oCTNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+<br>
+<br>
+<div style="text-align: left;">
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Powered by Python"/><br>
+Powered by Python<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ursina makes it easier to develop games, visualizations and other kinds of software.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The concise API combined with the power of the Python programming language,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;makes life easier for the developer so they can focus on what they are making.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Things you won't miss from other game engines:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Waiting for your code to compile<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The editor crashing and possibly losing your work<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Not being able to fix engine bugs or add features<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Overly verbose code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Uncustomizable workflow<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Waiting for imports<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Long build times<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Revenue cut or subscription fee<br>
+<br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Useful Features"/><br>
+Useful Features<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Reload code/textures/models while in-game<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Automatic import of .psd and .blend files<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Play in fullscreen while developing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Easy to use mesh class for making procedural geometry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Lots of included procedural 3D primitives<br>
+<br>
+<br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Platforms"/><br>
+Platforms<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Windows<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Linux<br>
+<br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Free and Open Source"/><br>
+Free and Open Source<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Licensed under the permissive MIT license,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;you can use Ursina for whatever you want. No subscription fee, no revenue cut.<br>
+<br>
+<br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Getting Started"/><br>
+Getting Started<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+1) Install Python 3.6 or newer. <a href="https://www.python.org/downloads/
+">https://www.python.org/downloads/
+</a><br>
+
+<br>
+2) Open cmd/terminal and type:
+<br>
+<div class="code_block" style="margin-left: 1em;">pip install ursina
+<br></div>
+<br>
+
+<br>
+If you want to install the newest version from GitHub, you can install like this:
+<br>
+<div class="code_block" style="margin-left: 1em;">pip install <a href="https://github.com/pokepetter/ursina/archive/master.zip
+">https://github.com/pokepetter/ursina/archive/master.zip
+</a><br></div>
+<br>
+or
+<br>
+
+<br>
+<div class="code_block" style="margin-left: 1em;">pip install git+https://github.com/pokepetter/ursina.git
+<br></div>
+<br>
+Keep in mind that things *could* break.
+<br>
+
+<br>
+
+<br>
+If you want to easily edit the source, it's recommended to clone the git
+<br>
+repo and install as develop like this. Make sure you have git installed. <a href="https://git-scm.com/
+">https://git-scm.com/
+</a><br>
+<div class="code_block" style="margin-left: 1em;">git clone <a href="https://github.com/pokepetter/ursina.git
+">https://github.com/pokepetter/ursina.git
+</a><br>python setup.py develop
+<br></div>
+<br>
+Also install any of the optional dependencies you want from the list below,
+<br>
+or install them all with:
+<br>
+<div class="code_block" style="margin-left: 1em;">pip install ursina[extras]
+<br></div>
+<br>
+
+<br>
+On some systems you might have to use pip3 instead of pip in order to use Python 3 and not the old Python 2.
+<br>
+If the pip command is not found, you can use:
+<br>
+<div class="code_block" style="margin-left: 0em;">python -m pip install ursina
+<br></div><br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Dependencies"/><br>
+Dependencies<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• python 3.6+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• panda3d<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• screeninfo, for detecting screen resolution<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• pillow, for texture manipulation<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• psutil, for measuring memory usage (optional)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• hurry.filesize, for converting bytes to megabytes (optional)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• imageio, for recording and converting to gifs (optional)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• psd-tools3, for converting .psd files (optional)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• blender, for converting .blend files (optional)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Optional dependencies must be installed manually.<br>
+<br>
+<br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="Examples"/><br>
+Examples<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Entity Example:<br>
+<br>
+<div class="code_block" style="margin-left: 2em;"><font color="purple">from</font> ursina <font color="purple">import</font> *            <font color="gray"># <font color="purple">import</font> everything we need with one line.</font><br><br>app = Ursina()<br>ground = <font color="olive">Entity</font>(<br>    model = <font color="green">'cube'</font>,<br>    color = color.magenta,<br>    z = -.1,<br>    y = -3,<br>    origin = (0, .5),<br>    scale = (50, 1, 10),<br>    collider = <font color="green">'box'</font><br>    )<br><br>app.run()                       <font color="gray"># opens a window and starts the game.</font><br><br></div><br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<div id="How do I make a game?"/><br>
+How do I make a game?<br>
+<div style="font-size: 20.0px;font-weight: normal;">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ursina games are made by writing Python code. You can use any text editor you want.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) Create an empty .py file called 'ursina_game.py'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Copy this text into your new file:<br>
+<br>
+<div class="code_block" style="margin-left: 3em;"><font color="purple">from</font> ursina <font color="purple">import</font> *<br><br>app = Ursina()<br><br>player = <font color="olive">Entity</font>(model=<font color="green">'cube'</font>, color=color.orange, scale_y=2)<br><br><font color="purple">def</font> update():   <font color="gray"># update gets automatically called.</font><br>    player.x += held_keys[<font color="green">'d'</font>] * .1<br>    player.x -= held_keys[<font color="green">'a'</font>] * .1<br><br>app.run()   <font color="gray"># opens a window and starts the game.</font><br><br></div><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) Type this in the terminal to start the game. I recommend setting a hotkey<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for this in your text editor:<br>
+<br>
+<div class="code_block" style="margin-left: 3em;">python ursina_game.py<br></div><br>
+&nbsp;&nbsp;&nbsp;&nbsp;The game should start! You can now move the orange box around with 'a' and 'd'!<br>
+&nbsp;&nbsp;&nbsp;&nbsp;To close the window, you can by default, press shift+q or press the red x.<br>
+<br>
+<br>
+<br>
+<br>
+<div style="font-size: 40.0px;font-weight: bold;">
+<img src="made_with_ursina.jpg"></img> <br>
+<div style="font-size: 15.0px;text-align: center;font-weight: normal;">
+<br>
+A variety of games made with Ursina<br>
+<br>
+
+</html>

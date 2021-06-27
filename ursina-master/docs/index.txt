@@ -1,0 +1,148 @@
+# style a.button {background-color: #6b943a;} a.button:hover {background-color: #a9a33a}
+# title ursina engine
+# center, bold, arial, size 5, width 900
+ursina engine
+ʕ •ᴥ•ʔゝ□
+# size 1.25, bold
+--------------------------------------
+# normal
+open source game engine
+# bold
+--------------------------------------
+# normal
+
+[Download, #Getting Started]  [Documentation, documentation.html]
+
+<a href="https://github.com/pokepetter/ursina"><img src="icons/github_icon.png"></img></a>  <a href="https://twitter.com/ursinaengine"><img src="icons/twitter_icon.png"></img></a>  <a href="https://discord.gg/ydXfhyb"><img src="icons/discord_icon.png"></img></a>  <a href="https://www.patreon.com/ursinaengine"><img src="icons/patreon_icon.png"></img></a>
+
+<iframe width="900" height="505" src="https://www.youtube-nocookie.com/embed/j71j88oCTNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+# left
+## Powered by Python
+
+    Ursina makes it easier to develop games, visualizations and other kinds of software.
+    The concise API combined with the power of the Python programming language,
+    makes life easier for the developer so they can focus on what they are making.
+
+    Things you won't miss from other game engines:
+
+        • Waiting for your code to compile
+        • The editor crashing and possibly losing your work
+        • Not being able to fix engine bugs or add features
+        • Overly verbose code
+        • Uncustomizable workflow
+        • Waiting for imports
+        • Long build times
+        • Revenue cut or subscription fee
+
+
+## Useful Features
+
+        • Reload code/textures/models while in-game
+        • Automatic import of .psd and .blend files
+        • Play in fullscreen while developing
+        • Easy to use mesh class for making procedural geometry
+        • Lots of included procedural 3D primitives
+
+
+
+## Platforms
+
+        • Windows
+        • Linux
+
+
+## Free and Open Source
+
+    Licensed under the permissive MIT license,
+    you can use Ursina for whatever you want. No subscription fee, no revenue cut.
+
+
+
+## Getting Started
+
+# insert _getting_started.txt
+
+
+## Dependencies
+
+    • python 3.6+
+    • panda3d
+    • screeninfo, for detecting screen resolution
+    • pillow, for texture manipulation
+
+    • psutil, for measuring memory usage (optional)
+    • hurry.filesize, for converting bytes to megabytes (optional)
+    • imageio, for recording and converting to gifs (optional)
+    • psd-tools3, for converting .psd files (optional)
+    • blender, for converting .blend files (optional)
+
+    Optional dependencies must be installed manually.
+
+
+
+## Examples
+
+    Entity Example:
+
+        # code
+        from ursina import *            # import everything we need with one line.
+
+        app = Ursina()
+        ground = Entity(
+            model = 'cube',
+            color = color.magenta,
+            z = -.1,
+            y = -3,
+            origin = (0, .5),
+            scale = (50, 1, 10),
+            collider = 'box'
+            )
+
+        app.run()                       # opens a window and starts the game.
+
+        # text
+
+
+## How do I make a game?
+
+    Ursina games are made by writing Python code. You can use any text editor you want.
+
+        1) Create an empty .py file called 'ursina_game.py'
+        2) Copy this text into your new file:
+
+            # code
+            from ursina import *
+
+            app = Ursina()
+
+            player = Entity(model='cube', color=color.orange, scale_y=2)
+
+            def update():   # update gets automatically called.
+                player.x += held_keys['d'] * .1
+                player.x -= held_keys['a'] * .1
+
+            app.run()   # opens a window and starts the game.
+
+            # text
+
+
+        3) Type this in the terminal to start the game. I recommend setting a hotkey
+           for this in your text editor:
+
+            # code
+            python ursina_game.py
+            # text
+
+    The game should start! You can now move the orange box around with 'a' and 'd'!
+    To close the window, you can by default, press shift+q or press the red x.
+
+
+
+
+# left, size 2, bold
+# image made_with_ursina.jpg
+# size .75, center, normal
+
+A variety of games made with Ursina
